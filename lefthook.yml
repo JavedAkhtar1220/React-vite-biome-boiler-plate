@@ -11,6 +11,7 @@ pre-commit:
       exclude: 'node_modules'
 
 commit-msg:
+  paralle: false
   commands:
     commitlint:
-      run: npx commitlint --edit $1
+      run: npx commitlint --edit $GIT_PARAMS
