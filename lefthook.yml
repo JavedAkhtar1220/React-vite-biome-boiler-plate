@@ -2,6 +2,10 @@ pre-commit:
   parallel: true
   commands:
     lint:
+      run: npm run biome:lint
+      include: './src/**/*.{js,jsx,ts,tsx}'
+      exclude: 'node_modules'
+    format:
       run: npm run biome:format
       include: './src/**/*.{js,jsx,ts,tsx}'
       exclude: 'node_modules'
@@ -15,8 +19,8 @@ pre-push:
   commands:
     biome-check:
       run: npm run biome:check
-    biome-check-apply:
-      run: npm run biome:check:apply
+    biome-fix:
+      run: npm run biome:fix
 
 commit-msg:
   paralle: false
