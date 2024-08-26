@@ -12,16 +12,7 @@
 		"lineWidth": 80,
 		"attributePosition": "auto"
 	},
-	"files": {
-		"ignore": [
-			"**/node_modules",
-			"**/dist",
-			"**/build",
-			"**/coverage",
-			"**/public",
-			"**/auto-generated/**"
-		]
-	},
+
 	"javascript": {
 		"formatter": {
 			"arrowParentheses": "always",
