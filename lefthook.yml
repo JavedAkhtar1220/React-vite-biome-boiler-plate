@@ -10,6 +10,14 @@ pre-commit:
       include: './src/**/*.{js,jsx,ts,tsx}'
       exclude: 'node_modules'
 
+pre-push:
+  parallel: false
+  commands:
+    biome-check:
+      run: npm run biome:check
+    biome-check-apply:
+      run: npm run biome:check:apply
+
 commit-msg:
   paralle: false
   commands:
