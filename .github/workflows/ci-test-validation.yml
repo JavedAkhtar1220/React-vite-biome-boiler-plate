@@ -1,6 +1,4 @@
 name: Test and Validate
-description: Runs tests, lint checks, and build verification for pull requests.
-
 on:
   push:
     branches:
