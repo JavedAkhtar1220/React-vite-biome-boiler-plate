@@ -7,8 +7,8 @@ This project is a ReactJS application built with Vite and BiomeJS. It includes R
 To get started, clone the repository and install the necessary dependencies:
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/JavedAkhtar1220/React-vite-biome-boiler-plate.git
+cd React-vite-biome-boiler-plate
 npm install
 ```
 
@@ -93,6 +93,6 @@ Feel free to contribute to this project by submitting [issues](https://github.co
 ## License
 
 This project is open source and available under the MIT License.  
-© [JavedAkhtar1220](https://github.com/JavedAkhtar1220), [Year]. All rights reserved. If you wish to use this project, please provide appropriate credit and a link to the original repository: [https://github.com/JavedAkhtar1220/React-vite-biome-boiler-plate.git](https://github.com/JavedAkhtar1220/React-vite-biome-boiler-plate.git).
+© [JavedAkhtar1220](https://github.com/JavedAkhtar1220), 2024. All rights reserved. If you wish to use this project, please provide appropriate credit and a link to the original repository: [https://github.com/JavedAkhtar1220/React-vite-biome-boiler-plate.git](https://github.com/JavedAkhtar1220/React-vite-biome-boiler-plate.git).
 
 Thank you for choosing this React boilerplate. Happy coding! 🚀
