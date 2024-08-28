@@ -11,6 +11,7 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
+import { ErrorBoundary } from './components';
 import { ThemeProvider } from './themes/ThemeProvider';
 
 const root = document.getElementById('root');
@@ -37,7 +38,9 @@ enableMocking().then(() => {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <ThemeProvider>
-            <App />
+            <ErrorBoundary>
+              <App />
+            </ErrorBoundary>
           </ThemeProvider>
         </PersistGate>
       </Provider>
