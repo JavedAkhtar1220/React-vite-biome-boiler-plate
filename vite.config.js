@@ -12,6 +12,9 @@ export default defineConfig({
       applyFixes: true,
     }),
   ],
+  server: {
+    port: 5000,
+  },
   resolve: {
     alias: {
       '@': '/src',
