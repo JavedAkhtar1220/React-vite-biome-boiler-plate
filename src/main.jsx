@@ -1,8 +1,18 @@
+import App from '@/App';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import App from './App.jsx';
-import './index.css';
-import App from '@/App';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import store, { persistor } from './redux/store';
+
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+import { ErrorBoundary } from './components';
+import { ThemeProvider } from './themes/ThemeProvider';
 
 const root = document.getElementById('root');
 
@@ -11,7 +21,7 @@ if (!root) {
 }
 
 async function enableMocking() {
-  if (process.env.NODE_ENV !== 'development') {
+  if (import.meta.env.MODE !== 'development') {
     return;
   }
 
@@ -25,7 +35,15 @@ async function enableMocking() {
 enableMocking().then(() => {
   createRoot(root).render(
     <StrictMode>
-      <App />
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <ThemeProvider>
+            <ErrorBoundary>
+              <App />
+            </ErrorBoundary>
+          </ThemeProvider>
+        </PersistGate>
+      </Provider>
     </StrictMode>
   );
 });
